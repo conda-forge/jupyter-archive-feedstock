@@ -5,7 +5,7 @@ Home: https://github.com/hadim/jupyter-archive
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A Jupyter/Jupyterlab extension to make, download and extract archive files.
 
