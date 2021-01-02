@@ -20,16 +20,21 @@ requirements:
   host:
     - python >=3.5
     - pip
-    - jupyterlab >=2.0.0,==2.*
+    - jupyterlab >=2.0.0,<=3
   run:
     - python >=3.5
-    - jupyterlab >=2.0.0,==2.*
+    - jupyterlab >=2.0.0,<=3
     - nodejs
 test:
+  requires:
+    - pip
   imports:
     - jupyter_archive
   commands:
+    - pip check
     - jupyter lab build
+    - jupyter serverextension list
+    - jupyter labextension list
     - jupyter serverextension list 2>&1 | grep -ie "jupyter-archive.*OK"
     - jupyter labextension list 2>&1 | grep -ie "@hadim/jupyter-archive.*OK"  
 
