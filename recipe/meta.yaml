@@ -1,5 +1,5 @@
 {% set name = "jupyter-archive" %}
-{% set version = "2.0.0" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cd98691698c5264125aaca4e44e059c0cb75391e9b42e29b353820d2516aecca
+  sha256: 098f2fa49b12840cbd73871d8f5223a4c6959d02e03728d9d96fa5d40f1d98e8
 
 build:
   noarch: python
@@ -34,7 +34,7 @@ test:
     - pip check
     - jupyter lab build
     - jupyter serverextension list 2>&1 | grep -ie "jupyter_archive.*OK"
-    - jupyter labextension list 2>&1 | grep -ie "@hadim/jupyter-archive.*OK"  
+    - jupyter labextension list 2>&1 | grep -ie "@hadim/jupyter-archive.*OK"
 
 about:
   home: https://github.com/jupyterlab-contrib/jupyter-archive
