@@ -34,13 +34,13 @@ test:
     - jupyter_archive
   commands:
     - pip check
-    - jupyter serverextension list 2>&1 | grep -ie "jupyter_archive.*OK"
+    - jupyter server extension list 2>&1 | grep -ie "jupyter_archive.*OK"
     - jupyter labextension list 2>&1 | grep -ie "@hadim/jupyter-archive.*OK"
 
 about:
   home: https://github.com/jupyterlab-contrib/jupyter-archive
-  summary: A Jupyterlab extension to make, download and extract archive files.
-  description: A Jupyterlab extension to make, download and extract archive files.
+  summary: A JupyterLab extension to make, download and extract archive files.
+  description: A JupyterLab extension to make, download and extract archive files.
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
