@@ -18,13 +18,15 @@ requirements:
   build:
     - nodejs
   host:
-    - python >=3.5
+    - python >=3.6
     - pip
-    - jupyterlab >=2.0.0,<3
+    - jupyterlab >=3.0.0,<4
+    - jupyter-packaging >=0.7.9,<0.8.0
+    - setuptools >=40.8.0
+    - wheel
   run:
-    - python >=3.5
-    - jupyterlab >=2.0.0,<3
-    - nodejs
+    - python >=3.6
+    - jupyterlab >=3.0.0,<4
 test:
   requires:
     - pip
@@ -32,7 +34,6 @@ test:
     - jupyter_archive
   commands:
     - pip check
-    - jupyter lab build
     - jupyter serverextension list 2>&1 | grep -ie "jupyter_archive.*OK"
     - jupyter labextension list 2>&1 | grep -ie "@hadim/jupyter-archive.*OK"
 
