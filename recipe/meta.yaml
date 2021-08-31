@@ -16,7 +16,7 @@ build:
 
 requirements:
   build:
-    - nodejs
+    - nodejs >=12.0.0
   host:
     - python >=3.6
     - pip
