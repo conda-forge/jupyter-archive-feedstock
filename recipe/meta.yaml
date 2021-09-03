@@ -1,5 +1,5 @@
 {% set name = "jupyter-archive" %}
-{% set version = "3.0.2" %}
+{% set version = "3.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8af95862417801b7c2dc6cdcd0ade7231673e254ba5cae01c331c56cdd74c7b3
+  sha256: 0b423ac7d7c137e9a50df499239273f8546efe4fa0196adbf9b0e3e16fd2bffd
 
 build:
   noarch: python
