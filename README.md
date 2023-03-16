@@ -1,11 +1,11 @@
-About jupyter-archive
-=====================
+About jupyter-archive-feedstock
+===============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter-archive-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/jupyterlab-contrib/jupyter-archive
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter-archive-feedstock/blob/main/LICENSE.txt)
 
 Summary: A JupyterLab extension to make, download and extract archive files.
 
