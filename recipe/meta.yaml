@@ -12,24 +12,23 @@ source:
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv --no-deps
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
-  build:
-    - nodejs >=12.0.0
   host:
-    - python >=3.6
+    - hatchling >=1.5.0
+    - hatch-jupyter-builder >=0.5
+    - hatch-nodejs-version
+    - jupyterlab >=4.0.0,<5
     - pip
-    - jupyterlab >=3.0.0,<4
-    - jupyter-packaging >=0.7.9,<0.8.0
-    - setuptools >=40.8.0
-    - wheel
+    - python >=3.8
   run:
-    - python >=3.6
+    - python >=3.8
     - jupyter_server >=1.21,<3.0.0
+
 test:
   requires:
-    - jupyterlab >=3.0.0,<4
+    - jupyterlab >=4.0.0,<5
     - pip
   imports:
     - jupyter_archive
