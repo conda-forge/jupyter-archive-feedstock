@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 9bf0170e0b45ac83fc46cbf1abc60f40ced5aacf0b5a1dae465eb3bdabaf17e9
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
@@ -21,15 +21,16 @@ requirements:
     - hatch-nodejs-version
     - jupyterlab >=4.0.0,<5
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - jupyter_server >=1.21,<3.0.0
 
 test:
   requires:
     - jupyterlab >=4.0.0,<5
     - pip
+    - python {{ python_min }}
   imports:
     - jupyter_archive
   commands:
