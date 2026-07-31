@@ -147,5 +147,4 @@ Feedstock Maintainers
 =====================
 
 * [@fcollonval](https://github.com/fcollonval/)
-* [@hadim](https://github.com/hadim/)
 
